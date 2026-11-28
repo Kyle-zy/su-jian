@@ -1,0 +1,30 @@
+{
+  "name": "su-jian",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "素笺 - 本地 Markdown 编辑器",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "verify": "node --experimental-strip-types scripts/verify-core.mjs",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.12.5",
+    "@tauri-apps/plugin-cli": "^2.5.0",
+    "@tauri-apps/plugin-dialog": "^2.8.4",
+    "highlight.js": "^11.12.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-task-lists": "^2.1.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.6",
+    "@types/markdown-it": "^14.1.2",
+    "@types/markdown-it-footnote": "^3.0.4",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.8"
+  }
+}

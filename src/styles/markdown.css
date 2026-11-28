@@ -1,0 +1,243 @@
+/* 渲染态排版。所有颜色走主题变量，亮色/暗色自动切换。 */
+
+.block__view > :first-child {
+  margin-top: 0;
+}
+
+.block__view > :last-child {
+  margin-bottom: 0;
+}
+
+.block__view p {
+  margin: 0;
+}
+
+.block__view h1,
+.block__view h2,
+.block__view h3,
+.block__view h4,
+.block__view h5,
+.block__view h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--heading);
+}
+
+.block__view h1 {
+  font-size: 1.9em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.block__view h2 {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.block__view h3 {
+  font-size: 1.25em;
+}
+
+.block__view h4 {
+  font-size: 1.1em;
+}
+
+.block__view h5,
+.block__view h6 {
+  font-size: 1em;
+}
+
+.block__view strong {
+  font-weight: 700;
+}
+
+.block__view em {
+  font-style: italic;
+}
+
+.block__view a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.block__view ul,
+.block__view ol {
+  margin: 0;
+  padding-left: 1.8em;
+}
+
+.block__view li {
+  margin: 1px 0;
+}
+
+.block__view li::marker {
+  color: var(--text-soft);
+}
+
+.block__view .task-list-item {
+  list-style: none;
+  margin-left: -1.4em;
+}
+
+.block__view .task-list-item-checkbox {
+  margin: 0 0.5em 0 0;
+  vertical-align: -1px;
+  accent-color: var(--accent);
+}
+
+.block__view blockquote {
+  margin: 0;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--quote-border);
+  color: var(--quote-text);
+}
+
+.block__view blockquote p {
+  margin: 0;
+}
+
+.block__view hr {
+  height: 1px;
+  margin: 12px 0;
+  border: 0;
+  background: var(--border);
+}
+
+.block__view :not(pre) > code {
+  padding: 2px 5px;
+  border: 1px solid var(--inline-code-border);
+  border-radius: 4px;
+  background: var(--inline-code-bg);
+  font-family: var(--mono);
+  font-size: 0.88em;
+}
+
+/* 代码块：颜色随主题切换 */
+
+.block__view pre.hljs {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--code-bg);
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.block__view pre.hljs code {
+  font-family: inherit;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--hljs-comment);
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-type {
+  color: var(--hljs-keyword);
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition {
+  color: var(--hljs-string);
+}
+
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: var(--hljs-number);
+}
+
+.hljs-title,
+.hljs-name,
+.hljs-section {
+  color: var(--hljs-title);
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-params {
+  color: var(--hljs-variable);
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: var(--hljs-builtin);
+}
+
+.hljs-deletion {
+  color: var(--danger);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+/* 表格 */
+
+.block__view table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+}
+
+.block__view th,
+.block__view td {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.block__view th {
+  background: var(--table-head);
+  font-weight: 600;
+}
+
+.block__view tr:nth-child(even) td {
+  background: var(--table-alt);
+}
+
+/* 脚注 */
+
+.block__view .footnotes {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.block__view .footnotes p {
+  margin: 2px 0;
+}
+
+.block__view .footnote-ref a {
+  text-decoration: none;
+}
+
+/* 图片本期不渲染：只显示原始语法文本 */
+
+.block__view .md-image-raw {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  color: var(--image-raw-text);
+  background: var(--image-raw-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
